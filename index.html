@@ -14,24 +14,24 @@
 <body>
 <div style="WIDTH: 100%; HEIGHT: 100%;">
 	<img src="1022235018.jpg" style= "width:90%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;z-index:-1">
-		<span  style="font-size:16px;color:#a0a;" > 
-			<script language="javascript">
-				var d = new Date();
-				var year = add_zero(d.getYear());
-				var month = add_zero(d.getMonth()+1);
-				var days = add_zero(d.getDate());
-				var hours = add_zero(d.getHours());
-				var minutes = add_zero(d.getMinutes());
-				var ndate =year+"年"month+"月"+days+"日 "+hours+":"+minutes;
-				document.write(ndate)
+	<span  style="font-size:16px;color:#a0a;" > 
+		<script language="javascript">
+			var d = new Date();
+			var year = add_zero(d.getYear());
+			var month = add_zero(d.getMonth()+1);
+			var days = add_zero(d.getDate());
+			var hours = add_zero(d.getHours());
+			var minutes = add_zero(d.getMinutes());
+			var ndate =year+"年"month+"月"+days+"日 "+hours+":"+minutes;
+			document.write(ndate)
 				
-				function add_zero(temp)
-				{
-				if(temp<10) return "0"+temp;
-				else return temp;
-				}
-			</script> 
-		</span>
+			function add_zero(temp)
+			{
+			if(temp<10) return "0"+temp;
+			else return temp;
+			}
+		</script> 
+	</span>
 <!-- <div style="width:100%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;><img src="1022235018.jpg" style="width:300px;border:0px;" /></div> -->
 </div>
 </body></html>
