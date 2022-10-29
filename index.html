@@ -19,7 +19,10 @@
 		seconds=seconds<10?"0"+seconds:seconds;
 		var milseconds = d.getMilliseconds();
 		milseconds = Math.floor(milseconds/100);
-		document.getElementById("time").innerHTML=year+"年"+month+"月"+days+"日 "+hours+":"+minutes+":"+seconds+":"+milseconds;
+		document.getElementById("year").innerHTML=year+"年"+month+"月"+days+"日 ";
+		document.getElementById("hour").innerHTML=hours+":"+minutes+":";
+		document.getElementById("seconds").innerHTML=seconds+".";
+		document.getElementById("milseconds").innerHTML=milseconds;
 	}
 	setInterval(myData,100);
 	
