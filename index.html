@@ -9,14 +9,20 @@
 	function myData(){
 		var d = new Date();
 		var year = d.getFullYear();
-		var month = d.getMonth()+1;
-		var days = d.getDate();
-		var hours = d.getHours();
-		var minutes = d.getMinutes();
-		var seconds = d.getSeconds();
-		document.getElementById("time").innerHTML=year+"年"+month+"月"+days+"日 "+hours+":"+minutes+":"+seconds;
+		var month = add_zero(d.getMonth()+1);
+		var days = add_zero(d.getDate());
+		var hours = add_zero(d.getHours());
+		var minutes = add_zero(d.getMinutes());
+		var seconds = add_zero(d.getSeconds());
+		var milseconds = d.getMilliseconds();
+		document.getElementById("time").innerHTML=year+"年"+month+"月"+days+"日 "+hours+":"+minutes+":"+seconds+":"+milseconds+;
 	}
-	setInterval(myData,1000);
+	setInterval(myData,100);
+	function add_zero(temp){
+		if(temp<10) return "0"+temp;
+		else return temp;
+	}
+	
 </script>
 <style>
 	<div style="position:relative;"></div>
