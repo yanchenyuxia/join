@@ -4,7 +4,20 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
 <meta http-equiv="expires" content="Wed, 26 Feb 2007 08:21:57 GMT"> -->
-<script language="javascript"></script>
+<script language="javascript">
+// 	var i = 0
+// 	function myData(){
+// 		var d = new Date();
+// 		var year = d.getFullYear();
+// 		var month = d.getMonth()+1;
+// 		var days = d.getDate();
+// 		var hours = d.getHours();
+// 		var minutes = d.getMinutes();
+// 		var seconds = d.getSeconds();
+// 		document.getElementById().innerHTML=year+"年"+month+"月"+days+"日 "+hours+":"+minutes+":"+seconds+":";
+// 	}
+// 	setInterval()
+</script>
 <style>
 	<div style="position:relative;"></div>
 	<h1 style="font-size:40px;color:black;position:absolute;top:200px;left:150px;"></h1>
@@ -25,7 +38,8 @@
 			var days = add_zero(d.getDate());
 			var hours = add_zero(d.getHours());
 			var minutes = add_zero(d.getMinutes());
-			var ndate =year+"年"+month+"月"+days+"日 "+hours+":"+minutes;
+			var seconds = add_zero(d.getSeconds());
+			var ndate =year+"年"+month+"月"+days+"日 "+hours+":"+minutes+seconds+":";
 			document.write(ndate)
 				
 			function add_zero(temp)
@@ -33,6 +47,7 @@
 			if(temp<10) return "0"+temp;
 			else return temp;
 			}
+			setInterval(myDate,1000);
 		</script> 
 	</h1>
 <!-- <div style="width:100%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;><img src="1022235018.jpg" style="width:300px;border:0px;" /></div> -->
